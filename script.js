@@ -19,5 +19,5 @@ function showSection(sectionId) {
   });
   
   // Mostrar a seção inicial (home) ao carregar a página
-  showSection('home');
+  showSection('hamburgers');
   
