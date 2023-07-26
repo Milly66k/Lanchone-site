@@ -17,9 +17,19 @@
         <li><a href="#hamburgers">Hambúrgueres</a></li>
         <li><a href="#hotdogs">Cachorros-quentes</a></li>
         <li><a href="#pizza">Pizza</a></li>
+        <li><a href="#cart">Carrinho</a></li>
       </ul>
     </nav>
   </header>
+  <section id="cart">
+    <h2>Carrinho de Compras</h2>
+    <div class="cart-items">
+      <!-- Aqui serão exibidos os itens do carrinho -->
+    </div>
+    <p>Total: <span id="cart-total">R$ 0,00</span></p>
+    <button id="clear-cart">Limpar Carrinho</button>
+  </section>
+  
 
   <section id="home">
     <h2>Bem-vindo à nossa loja de hambúrgueres!</h2>
@@ -29,164 +39,219 @@
   <section id="hamburgers">
     <h2>Hambúrgueres</h2>
     <div class="card-container">
-        <div class="card">
-          <h3>Hambúrguer 1</h3>
-          <img src="./src/imagens/img-hamb/alexander-startsev-ndNw_6QGR_c-unsplash.jpg" alt="Hambúrguer 1">
-          <p>Valor: R$ 20,00</p>
-        </div>
-        <div class="card">
-            <h3>Hambúrguer 2</h3>
-            <img src="./src/imagens/img-hamb/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt="Hambúrguer 2">
-            <p>Valor: R$ 25,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 3</h3>
-            <img src="./src/imagens/img-hamb/eiliv-aceron-mwbjyRUTlIQ-unsplash.jpg" alt="Hambúrguer 3">
-            <p>Valor: R$ 30,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 4</h3>
-            <img src="./src/imagens/img-hamb/food-photographer-E94j3rMcxlw-unsplash.jpg" alt="Hambúrguer 4">
-            <p>Valor: R$ 35,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 5</h3>
-            <img src="./src/imagens/img-hamb/food-photographer-Fn6dPYtPUMc-unsplash.jpg"Hambúrguer 5">
-            <p>Valor: R$ 40,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 6</h3>
-            <img src="./src/imagens/img-hamb/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg" alt="Hambúrguer 6">
-            <p>Valor: R$ 45,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 7</h3>
-            <img src="./src/imagens/img-hamb/mae-mu-I7A_pHLcQK8-unsplash.jpg" alt="Hambúrguer 7">
-            <p>Valor: R$ 50,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 8</h3>
-            <img src="./src/imagens/img-hamb/sk-CK6tjAIMJWM-unsplash.jpg" alt="Hambúrguer 8">
-            <p>Valor: R$ 55,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 9</h3>
-            <img src="./src/imagens/img-hamb/sk-uVPV_nV17Tw-unsplash.jpg" alt="Hambúrguer 9">
-            <p>Valor: R$ 60,00</p>
-          </div>
-          <div class="card">
-            <h3>Hambúrguer 10</h3>
-            <img src="./src/imagens/img-hamb/alexander-startsev-ndNw_6QGR_c-unsplash.jpg" alt="Hambúrguer 10">
-            <p>Valor: R$ 65,00</p>
-          </div>
+      <div class="card">
+        <h3>Hambúrguer 1</h3>
+        <img src="./src/imagens/img-hamb/alexander-startsev-ndNw_6QGR_c-unsplash.jpg" alt="Hambúrguer 1">
+        <p>Valor: R$ 20,00</p>
+        <button onclick="addToCart('Hambúrguer 1', 20.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 2</h3>
+        <img src="./src/imagens/img-hamb/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg" alt="Hambúrguer 2">
+        <p>Valor: R$ 25,00</p>
+        <button onclick="addToCart('Hambúrguer 2', 25.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 3</h3>
+        <img src="./src/imagens/img-hamb/eiliv-aceron-mwbjyRUTlIQ-unsplash.jpg" alt="Hambúrguer 3">
+        <p>Valor: R$ 30,00</p>
+        <button onclick="addToCart('Hambúrguer 3', 30.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 4</h3>
+        <img src="./src/imagens/img-hamb/food-photographer-E94j3rMcxlw-unsplash.jpg" alt="Hambúrguer 4">
+        <p>Valor: R$ 35,00</p>
+        <button onclick="addToCart('Hambúrguer 4', 35.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 5</h3>
+        <img src="./src/imagens/img-hamb/food-photographer-Fn6dPYtPUMc-unsplash.jpg" alt="Hambúrguer 5">
+        <p>Valor: R$ 40,00</p>
+        <button onclick="addToCart('Hambúrguer 5', 40.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 6</h3>
+        <img src="./src/imagens/img-hamb/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg" alt="Hambúrguer 6">
+        <p>Valor: R$ 45,00</p>
+        <button onclick="addToCart('Hambúrguer 6', 45.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 7</h3>
+        <img src="./src/imagens/img-hamb/mae-mu-I7A_pHLcQK8-unsplash.jpg" alt="Hambúrguer 7">
+        <p>Valor: R$ 50,00</p>
+        <button onclick="addToCart('Hambúrguer 7', 50.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 8</h3>
+        <img src="./src/imagens/img-hamb/sk-CK6tjAIMJWM-unsplash.jpg" alt="Hambúrguer 8">
+        <p>Valor: R$ 55,00</p>
+        <button onclick="addToCart('Hambúrguer 8', 55.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 9</h3>
+        <img src="./src/imagens/img-hamb/sk-uVPV_nV17Tw-unsplash.jpg" alt="Hambúrguer 9">
+        <p>Valor: R$ 60,00</p>
+        <button onclick="addToCart('Hambúrguer 9', 65.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <h3>Hambúrguer 10</h3>
+        <img src="./src/imagens/img-hamb/alexander-startsev-ndNw_6QGR_c-unsplash.jpg" alt="Hambúrguer 10">
+        <p>Valor: R$ 65,00</p>
+        <button onclick="addToCart('Hambúrguer 10', 65.00)">Adicionar ao Carrinho</button>
+      </div>
     </div>
-
   </section>
 
   <section id="hotdogs">
     <h2>Cachorros-quentes</h2>
     <div class="card-container">
-    <div class="card">
-      <h3>Cachorro-quente 1</h3>
-      <img src="./src/imagens/img-hot-dog/ball-park-brand-m5TxEgWPz78-unsplash.jpg" alt="Cachorro-quente 1">
-      <p>Valor: R$ 30,00</p>
-    </div>
-    <div class="card">
+      <div class="card">
+        <h3>Cachorro-quente 1</h3>
+        <img src="./src/imagens/img-hot-dog/ball-park-brand-m5TxEgWPz78-unsplash.jpg" alt="Cachorro-quente 1">
+        <p>Valor: R$ 8,00</p>
+        <button onclick="addToCart('Cachorro-quente 1', 8.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Cachorro-quente 2</h3>
         <img src="./src/imagens/img-hot-dog/ball-park-brand-MR329Bd-7sA-unsplash.jpg" alt="Cachorro-quente 2">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 10,00</p>
+        <button onclick="addToCart('Cachorro-quente 2', 10.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 3</h3>
         <img src="./src/imagens/img-hot-dog/daniel-lloyd-blunk-fernandez-FjXCbRMMSSc-unsplash.jpg" alt="Cachorro-quente 3">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 12,00</p>
+        <button onclick="addToCart('Cachorro-quente 3', 12.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 4</h3>
         <img src="./src/imagens/img-hot-dog/david-todd-mccarty-expjjf7saMk-unsplash.jpg" alt="Cachorro-quente 4">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 13,00</p>
+        <button onclick="addToCart('Cachorro-quente 4', 13.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 5</h3>
         <img src="./src/imagens/img-hot-dog/ion-ivan-sipilov-UtmW0bm1OOA-unsplash.jpg" alt="Cachorro-quente 5">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 15,00</p>
+        <button onclick="addToCart('Cachorro-quente 5', 15.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 6</h3>
         <img src="./src/imagens/img-hot-dog/jessica-loaiza-glqTtszXfM0-unsplash.jpg" alt="Cachorro-quente 6">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 16,00</p>
+        <button onclick="addToCart('Cachorro-quente 6', 16.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 7</h3>
         <img src="./src/imagens/img-hot-dog/matt-seymour--WLYF9BmFEU-unsplash.jpg" alt="Cachorro-quente 7">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 17,00</p>
+        <button onclick="addToCart('Cachorro-quente 7', 17.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 8</h3>
         <img src="./src/imagens/img-hot-dog/mr_wdh-PPwYBaC_g8M-unsplash.jpg" alt="Cachorro-quente 8">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 18,00</p>
+        <button onclick="addToCart('Cachorro-quente 8', 18.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 9</h3>
         <img src="./src/imagens/img-hot-dog/timoune-aracama-CRnTIhqbsyU-unsplash.jpg" alt="Cachorro-quente 9">
-        <p>Valor: R$ 30,00</p>
+        <p>Valor: R$ 20,00</p>
+        <button onclick="addToCart('Cachorro-quente 9', 20.00)">Adicionar ao Carrinho</button>
       </div>
+  
       <div class="card">
         <h3>Cachorro-quente 10</h3>
         <img src="./src/imagens/img-hot-dog/victoria-shes-8pK37xtN4bo-unsplash.jpg" alt="Cachorro-quente 10">
-        <p>Valor: R$ 3000</p>
+        <p>Valor: R$ 25,00</p>
+        <button onclick="addToCart('Cachorro-quente 10', 25.00)">Adicionar ao Carrinho</button>
       </div>
     </div>
-    
   </section>
+  
   <section id="pizza">
-
-    <h2>Pizza</h2>
+    <h2>Pizzas</h2>
     <div class="card-container">
-    <div class="card">
-      <h3>Pizza 1</h3>
-      <img src="./src/imagens/img-pizza/fatima-akram-uU0Anw-8Vsg-unsplash.jpg" alt="Pizza 1">
-      <p>Valor: R$ 30,00</p>
-    </div>
-    <div class="card">
+      <div class="card">
+        <h3>Pizza 1</h3>
+        <img src="./src/imagens/img-pizza/fatima-akram-uU0Anw-8Vsg-unsplash.jpg" alt="Pizza 1">
+        <p>Valor: R$ 35,00</p>
+        <button onclick="addToCart('Pizza 1', 35.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 2</h3>
         <img src="./src/imagens/img-pizza/fernando-andrade-_P76trHTWDE-unsplash.jpg" alt="Pizza 2">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <p>Valor: R$ 40,00</p>
+        <button onclick="addToCart('Pizza 2', 40.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 3</h3>
         <img src="./src/imagens/img-pizza/foad-roshan-Y6OgisiGBjM-unsplash.jpg" alt="Pizza 3">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <p>Valor: R$ 38,00</p>
+        <button onclick="addToCart('Pizza 3', 38.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 4</h3>
         <img src="./src/imagens/img-pizza/mahyar-motebassem-pGA4zHvpo5E-unsplash.jpg" alt="Pizza 4">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <p>Valor: R$ 42,00</p>
+        <button onclick="addToCart('Pizza 4', 42.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 5</h3>
         <img src="./src/imagens/img-pizza/pinar-kucuk-Ae7jQFDTPk4-unsplash.jpg" alt="Pizza 5">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <p>Valor: R$ 39,00</p>
+        <button onclick="addToCart('Pizza 5', 39.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 6</h3>
         <img src="./src/imagens/img-pizza/saahil-khatkhate-kfDsMDyX1K0-unsplash.jpg" alt="Pizza 6">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <p>Valor: R$ 45,00</p>
+        <button onclick="addToCart('Pizza 6', 45.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 7</h3>
-        <img src="./src/imagens/img-pizza/sahal-hameed-Nq9KlQTTEbQ-unsplash.jpg" alt="Pizza-7">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <img src="./src/imagens/img-pizza/sahal-hameed-Nq9KlQTTEbQ-unsplash.jpg" alt="Pizza 7">
+        <p>Valor: R$ 37,00</p>
+        <button onclick="addToCart('Pizza 7', 37.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 8</h3>
         <img src="./src/imagens/img-pizza/saundarya-srinivasan-60nzTP7_hMQ-unsplash.jpg" alt="Pizza 8">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <p>Valor: R$ 41,00</p>
+        <button onclick="addToCart('Pizza 8', 41.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 9</h3>
         <img src="./src/imagens/img-pizza/shourav-sheikh-a66sGfOnnqQ-unsplash.jpg" alt="Pizza 9">
-        <p>Valor: R$ 30,00</p>
-      </div>   <div class="card">
+        <p>Valor: R$ 36,00</p>
+        <button onclick="addToCart('Pizza 9', 36.00)">Adicionar ao Carrinho</button>
+      </div>
+  
+      <div class="card">
         <h3>Pizza 10</h3>
-        <img src="./src/imagens/img-pizza/foad-roshan-Y6OgisiGBjM-unsplash.jpg" alt="Pizza 10">
-        <p>Valor: R$ 30,00</p>
+        <img src="./src/imagens/img-pizza/mahyar-motebassem-pGA4zHvpo5E-unsplash.jpg" alt="Pizza 10">
+        <p>Valor: R$ 44,00</p>
+        <button onclick="addToCart('Pizza 10', 44.00)">Adicionar ao Carrinho</button>
+      </div>
     </div>
-    
   </section>
+  
 
   <script src="script.js"></script>
 </body>

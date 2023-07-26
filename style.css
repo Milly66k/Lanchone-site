@@ -1,95 +1,129 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  header h1 {
-    padding: 30px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  h1 {
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .cta-ul li {
-    padding: 5px;
-  }
-  
-  nav li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    background-color: #f1f1f1;
-    padding: 50px;
-    margin: 50px;
-    border-radius: 20px;
-    max-width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card h3 {
-    margin-top: 0;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 100px;
-    width: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-weight: bold;
-  }
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-  *::-webkit-scrollbar {
-    width: 12px;
+header h1 {
+  padding: 30px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cta-ul li {
+  padding: 5px;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Adicionando transição suave para a cor */
+}
+
+nav a:hover {
+  color: #ffd700; /* Cor alterada no hover */
+}
+
+section {
+  padding: 20px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px -15px; /* Aumentando o espaçamento vertical e removendo o espaçamento lateral */
+}
+
+.card {
+  background-color: #f1f1f1;
+  padding: 25px;
+  margin: 15px; /* Aumentando o espaçamento entre os cards */
+  border-radius: 10px;
+  flex-basis: calc(25% - 30px); /* Definindo a largura dos cards em aproximadamente 1/4 do container e considerando o espaçamento */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card img {
+  width: 100%;
+  max-height: 240px; /* Aumentando a altura máxima da imagem */
+  object-fit: cover; /* Evitando que a imagem seja esticada */
+  border-radius: 10px;
+}
+
+.card p {
+  font-weight: bold;
+}
+#cart {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#clear-cart {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#clear-cart:hover {
+  background-color: #555;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-items div {
+  margin-bottom: 10px;
+}
+
+/* Adicione mais estilos conforme necessário */
+
+/* Estilos para scrollbars */
+*::-webkit-scrollbar {
+  width: 12px;
 }
 
 *::-webkit-scrollbar-track {
-    background: #f1e9e9;
+  background: #f1e9e9;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #582965;
-    border-radius: 20px;
-    border: 3px solid #ffffff;
+  background-color: #582965;
+  border-radius: 20px;
+  border: 3px solid #ffffff;
 }
-
-  
-   
-  
