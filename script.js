@@ -1,3 +1,5 @@
+
+
 // Função para exibir a seção correspondente ao link clicado
 function showSection(sectionId) {
     document.querySelectorAll('section').forEach(function(section) {
@@ -13,11 +15,13 @@ function showSection(sectionId) {
   document.querySelectorAll('nav a').forEach(function(link) {
     link.addEventListener('click', function(event) {
       event.preventDefault();
-      var targetId = this.getAttribute('href').substring(1);
+      let targetId = this.getAttribute('href').substring(1);
       showSection(targetId);
     });
   });
   
+
+
   // Mostrar a seção inicial (home) ao carregar a página
   showSection('hamburgers');
 
