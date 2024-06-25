@@ -1,0 +1,391 @@
+/* Reset e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* HEADER */
+header {
+  background-color: #211F20;
+  color: #fff;
+  padding: 20px;
+  height: 100px;
+}
+
+header #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 70px;
+}
+
+header #navbar .nav-brand,
+header #navbar .cta-ul .nav-item a {
+  text-decoration: none;
+  color: #f7f7f7;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+header #navbar .cta-ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-icon-item {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-icon-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border: 2px solid transparent;
+}
+
+.nav-icon-item:hover {
+  transform: scale(1.2);
+}
+
+header #navbar .cta-ul .nav-item a:hover,
+header #navbar .nav-brand:hover {
+  color: #777;
+}
+
+/* CARRINHO DE COMPRA */
+#cart {
+  background-color: #f1f1f1;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#cart p {
+  margin-top: 20px;
+}
+
+#clear-cart {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+#clear-cart:hover {
+  background-color: #555;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-items div {
+  margin-bottom: 10px;
+}
+
+/* HOME */
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main #banner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: 200px;
+}
+
+main #banner .banner-content .banner-content-title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+main #banner .banner-content .banner-content-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 500px;
+  margin-bottom: 38px;
+}
+
+main #banner .banner-content .banner-content-btn {
+  background-color: #211F20;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 12px 24px; /* Aumentando o padding para mais espaço ao redor do botão */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+main #banner .banner-content .banner-content-btn:hover {
+  background-color: #333; /* Mudando a cor de fundo ao passar o mouse */
+}
+
+main #banner .banner-image {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* CARDS */
+section {
+  padding: 30px;
+}
+
+.title-hm {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  padding: 50px 100px;
+  /* Distribui os cards de maneira uniforme */
+  gap: 100px; 
+  /* Espaçamento entre os cards */
+}
+
+
+.card {
+  background-color: #d6d6d6;
+  padding: 25px;
+  border-radius: 10px;
+  width: calc(33.33% - 40px); 
+  /* Ajustando a largura dos cards para 3 por linha */
+  max-width: 300px; 
+  /* Definindo uma largura máxima */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+
+.card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 auto;
+  margin-bottom: 20px; 
+  /* Ajustando o espaçamento abaixo do título */
+}
+
+.card img {
+  width: 100%;
+  height: auto; /* Ajuste para tornar a imagem responsiva */
+  max-height: 200px; /* Limitando a altura máxima da imagem */
+  min-height: 200px; 
+  object-fit:  cover;
+  border-radius: 5px;
+}
+
+.card p {
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #211F20;
+  color: #fff;
+  font-size: 16px; /* Reduzindo o tamanho da fonte para os botões dos cards */
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 16px; /* Ajustando o padding do botão */
+  border: none;
+  cursor: pointer;
+  margin-top: 10px; /* Espaçamento acima do botão */
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efeito de levantar o card ao passar o mouse */
+}
+.card button:hover {
+  background-color: #333;
+}
+
+/* Estilos para scrollbars */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1e9e9;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #582965;
+  border-radius: 20px;
+  border: 3px solid #ffffff;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 20px); /* Dois cards por linha em telas menores */
+  }
+
+  .card:nth-child(2n+1) {
+    margin-right: auto; /* Centraliza o primeiro card em cada linha */
+  }
+
+  .card:nth-child(2n) {
+    margin-right: 0; /* Remove a margem direita do segundo card em cada linha */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Um card por linha em telas menores */
+  }
+}
+
+/* footer */
+
+.links {
+  display: flex;
+
+}
+.links a img {
+  width: 25px; /* Reduzi o tamanho dos ícones */
+  height: 25px;
+  margin: 5px; /* Reduzi a margem entre os ícones */
+  filter: brightness(.8);
+  transition: all .3s ease;
+
+}
+
+.links a img:hover {
+  filter: brightness(1);
+  transform: scale(1.15);
+  list-style: none;
+  text-decoration: none;
+}
+
+#contacts {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* Reduzi a altura */
+  width: 100%;
+  background: #000;
+  color: #fff;
+}
+
+.contact-icon-content h2 {
+  margin: 1rem 0; /* Reduzi as margens */
+  padding: 0.5rem;
+  font-size: 1.5rem; /* Reduzi o tamanho da fonte */
+  color: #fff;
+  width: 200px;
+}
+
+.contact-icons-weapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2rem; /* Reduzi o padding */
+  max-height: 80px;
+
+
+
+}
+
+.contact-icon-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem; /* Reduzi a margem */
+  padding: 0.5rem;
+}
+
+.contact-icon {
+  height: 30px; /* Reduzi o tamanho dos ícones de contato */
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem; /* Reduzi a margem direita */
+  background: #fff;
+  padding: 0.5rem; /* Reduzi o padding */
+  border-radius: 50%;
+}
+
+.contact-icon i {
+  font-size: 1.5rem; /* Reduzi o tamanho da fonte dos ícones */
+  color: blue;
+}
+
+.contact-info span {
+  font-size: 1rem; /* Reduzi o tamanho da fonte */
+  font-weight: bold;
+}
+
+.contact-info p {
+  margin: 0.25rem 0;
+}
+
+.contact-info a {
+  display: block;
+  margin: 0.25rem 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-info a:hover {
+  transition: color .3s ease;
+  color: blue;
+}
+
+#footer {
+  height: 15vh; /* Reduzi a altura do rodapé */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #191919;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
