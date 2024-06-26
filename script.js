@@ -14,9 +14,9 @@ function addToCart(itemName, itemPrice) {
   const existingItemIndex = cart.findIndex(item => item.name === itemName);
   
   if (existingItemIndex !== -1) {
-      cart[existingItemIndex].quantity += 1;
+    cart[existingItemIndex].quantity += 1;
   } else {
-      cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+    cart.push({ name: itemName, price: itemPrice, quantity: 1 });
   }
 
   saveCart(cart);
@@ -38,28 +38,38 @@ function updateCartDisplay() {
   const cartItemsContainer = document.querySelector('.cart-items');
   const cartTotal = document.getElementById('cart-total');
 
-  cartItemsContainer.innerHTML = '';
-  let total = 0;
+  if (cartItemsContainer && cartTotal) {
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
 
-  cart.forEach((item, index) => {
+    cart.forEach((item, index) => {
       const itemElement = document.createElement('div');
       itemElement.classList.add('cart-item');
       itemElement.innerHTML = `
-          <span>${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</span>
-          <button class="remove-item" onclick="removeFromCart(${index})"><i class="fas fa-times"></i></button>
+        <span>${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}</span>
+        <button class="remove-item" onclick="removeFromCart(${index})"><i class="fas fa-times"></i></button>
       `;
       cartItemsContainer.appendChild(itemElement);
       total += item.price * item.quantity;
-  });
+    });
 
-  cartTotal.textContent = `R$ ${total.toFixed(2)}`;
+    cartTotal.textContent = `R$ ${total.toFixed(2)}`;
+  }
 }
 
 // Função para limpar o carrinho
-document.getElementById('clear-cart').addEventListener('click', () => {
-  localStorage.removeItem('cart');
-  updateCartDisplay();
-});
+function setupClearCartButton() {
+  const clearCartButton = document.getElementById('clear-cart');
+  if (clearCartButton) {
+    clearCartButton.addEventListener('click', () => {
+      localStorage.removeItem('cart');
+      updateCartDisplay();
+    });
+  }
+}
 
 // Atualizar a exibição do carrinho ao carregar a página
-window.onload = updateCartDisplay;
+window.onload = () => {
+  updateCartDisplay();
+  setupClearCartButton();
+};
